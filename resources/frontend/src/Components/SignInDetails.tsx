@@ -1,22 +1,16 @@
 import React from "react";
-import {ISignDetails} from "../ISignModels/ISignDetails.tsx";
+import {IFuncDetails} from "../Models/IFuncDetails.tsx";
 
-
-
-
-
-const SignInForm: React.FC<ISignDetails> = ({handleInputField,handleSubmit}) => {
-
+const SignInDetails: React.FC <IFuncDetails>= ({handleInputField,handleSubmit}) => {
     return (
-        <section className="bg-white-50 ">
+        <section className="bg-gray-50 dark:bg-white-900">
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <div
-                    className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                     <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                         <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                             Sign in to your account
                         </h1>
-                        <form className="space-y-4 md:space-y-6"  onSubmit={handleSubmit}>
+                        <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
                             <div>
                                 <label
                                     htmlFor="email"
@@ -56,6 +50,7 @@ const SignInForm: React.FC<ISignDetails> = ({handleInputField,handleSubmit}) => 
                             >
                                 Sign in
                             </button>
+
                         </form>
                     </div>
                 </div>
@@ -64,4 +59,4 @@ const SignInForm: React.FC<ISignDetails> = ({handleInputField,handleSubmit}) => 
     );
 };
 
-export default SignInForm;
+export default SignInDetails;
